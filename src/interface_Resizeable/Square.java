@@ -1,6 +1,7 @@
 package interface_Resizeable;
 
-public class Square extends Rectangle {
+
+public class Square extends Rectangle implements Colorable{
     private double side;
 
     public Square(){
@@ -31,7 +32,8 @@ public class Square extends Rectangle {
     public void resize(double percent) {
         setSide(getWidth()*percent);
     }
-
-
-
-}
+    @Override
+    public void howToColor(){
+        System.out.println("Color all four sides.");
+        }
+    }
